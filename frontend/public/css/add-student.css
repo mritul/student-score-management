@@ -1,0 +1,86 @@
+/* Main site */
+.main {
+  min-height: 90vh;
+  padding-top: 10vh;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+.btn {
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  box-shadow: 2px 2px 5px 2px grey;
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.btn i {
+  color: rgb(106, 99, 250);
+}
+
+form {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-title {
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.form-desc {
+  color: rgb(155, 152, 152);
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  border: 1px solid rgb(176, 175, 175);
+  border-radius: 5px;
+  outline: none;
+  height: 40px;
+  padding: 10px;
+}
+
+.form-group > label {
+  color: rgb(116, 114, 114);
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: rgb(106, 99, 250);
+  color: white;
+  font-weight: 400;
+  outline: 0;
+  height: 40px;
+  border: none;
+  font-size: 1.5rem;
+}

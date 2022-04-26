@@ -1,0 +1,84 @@
+/* Main site */
+.main {
+  min-height: 90vh;
+  padding-top: 10vh;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.btn {
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  box-shadow: 2px 2px 5px 2px grey;
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.btn i {
+  color: rgb(106, 99, 250);
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  border-top: 1px solid rgb(208, 208, 208);
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+.td-action {
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.td-action a:nth-child(1) {
+  color: green;
+}
+
+.td-action a:nth-child(2) {
+  color: red;
+}
+
+tr:hover td {
+  background-color: rgb(159, 155, 248);
+  border-color: rgb(159, 155, 248);
+}
+
+@media screen and (max-width: 730px) {
+  th {
+    display: none;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    margin: auto;
+  }
+}

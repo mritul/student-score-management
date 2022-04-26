@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/_head.ejs") %>
+  <body>
+    <%- include("./partials/_header.ejs") %>
+    <section class="main">
+      <div class="container">
+        <a href="/add-student"
+          ><button class="btn">
+            <i class="fa-solid fa-user-plus"></i> Add Student
+          </button></a
+        >
+        <table>
+          <thead>
+            <tr>
+              <th>Roll No.</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Score</th>
+              <th>Performance</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Chebrolu Rajarsha Madipalli Sai Varshita</td>
+              <td>johndoe2020@gmail.com</td>
+              <td>90</td>
+              <td>Excellent</td>
+              <td class="td-action">
+                <a href="/update-user"
+                  ><i class="fa-solid fa-pen-to-square"></i
+                ></a>
+                <a href="/delete-user"><i class="fa-solid fa-xmark"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Chebrolu Rajarsha Madipalli Sai Varshita</td>
+              <td>johndoe2020@gmail.com</td>
+              <td>90</td>
+              <td>Excellent</td>
+              <td class="td-action">
+                <a href="/update-user"
+                  ><i class="fa-solid fa-pen-to-square"></i
+                ></a>
+                <a href="/delete-user"><i class="fa-solid fa-xmark"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
