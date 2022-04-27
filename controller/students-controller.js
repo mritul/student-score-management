@@ -12,7 +12,7 @@ const findStudents = (req, res) => {
         res.send(data);
       })
       .catch((err) => {
-        res.send({ message: "Error student was not found" });
+        res.send({ message: "Error... student was not found" });
       });
   } else {
     Student.find()
@@ -34,11 +34,14 @@ const postStudentDetails = (req, res) => {
     student
       .save()
       .then((data) => {
-        res.send("Succefully created student record");
-        res.send(data);
+        res.redirect("/");
       })
       .catch((err) => {
-        res.send({ message: "An error occured...Couldn't register student" });
+        res.send({
+          message:
+            "An error occured...Couldn't register student. Make sure all fields are filled and the emails are unique",
+        });
+        console.log(err);
       });
   }
 };
@@ -46,7 +49,9 @@ const postStudentDetails = (req, res) => {
 //updateStudentDetails function updates the student record based on details provided by the form
 const updateStudentDetails = (req, res) => {
   if (!req.body) {
-    res.send("Cannot update details without filling all fields");
+    res.send(
+      "Cannot update details without filling all fields. Ensure that the email given is unique"
+    );
   } else {
     const id = req.params.id;
     Student.findByIdAndUpdate(id, req.body)

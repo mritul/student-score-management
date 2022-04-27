@@ -63,8 +63,12 @@ th {
 }
 
 tr:hover td {
-  background-color: rgb(159, 155, 248);
-  border-color: rgb(159, 155, 248);
+  background-color: rgb(189, 186, 255);
+  border-color: rgb(189, 186, 255);
+}
+
+.alert {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 730px) {

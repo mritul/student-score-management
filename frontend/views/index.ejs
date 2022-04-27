@@ -22,32 +22,26 @@
             </tr>
           </thead>
           <tbody>
+            <% if(students.length>0){ %> <% for(var i=0;i < students.length;i++)
+            { %>
             <tr>
-              <td>1</td>
-              <td>Chebrolu Rajarsha Madipalli Sai Varshita</td>
-              <td>johndoe2020@gmail.com</td>
-              <td>90</td>
-              <td>Excellent</td>
+              <td><%= students[i].rollno %></td>
+              <td><%= students[i].name %></td>
+              <td><%= students[i].email %></td>
+              <td><%= students[i].score %></td>
+              <td><%= students[i].performance %></td>
               <td class="td-action">
-                <a href="/update-user"
+                <a href="/update-student?id=<%= students[i]._id %>"
                   ><i class="fa-solid fa-pen-to-square"></i
                 ></a>
-                <a href="/delete-user"><i class="fa-solid fa-xmark"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Chebrolu Rajarsha Madipalli Sai Varshita</td>
-              <td>johndoe2020@gmail.com</td>
-              <td>90</td>
-              <td>Excellent</td>
-              <td class="td-action">
-                <a href="/update-user"
-                  ><i class="fa-solid fa-pen-to-square"></i
+                <a href="/delete-student/<%= students[i]._id %> "
+                  ><i class="fa-solid fa-xmark"></i
                 ></a>
-                <a href="/delete-user"><i class="fa-solid fa-xmark"></i></a>
               </td>
             </tr>
+            <% }}else{ %>
+            <p class="alert">No records found</p>
+            <% } %>
           </tbody>
         </table>
       </div>
