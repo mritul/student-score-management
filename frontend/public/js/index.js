@@ -32,19 +32,6 @@ if (updateForm) {
     });
   });
 }
-
-// fetch("http://localhost:${data.port}/api/students/${data.id}", {
-//     method: "PUT",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(data),
-//   })
-//     .then((response) => {
-//       response.json();
-//     })
-//     .then((data) => {
-//       alert("Successfully updated data");
-//     });
-
 if (window.location.pathname == "/") {
   const deleteBtn = document.querySelectorAll(".deleteBtn");
   deleteBtn.forEach((btn) => {
