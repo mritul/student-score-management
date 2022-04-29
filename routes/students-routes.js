@@ -18,6 +18,7 @@ route.get("/", (req, res) => {
         title: "Home",
         students: data,
         link: "/css/index.css",
+        port: process.env.port,
       });
     })
     .catch((err) => {

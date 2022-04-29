@@ -60,6 +60,7 @@ th {
 
 .td-action a:nth-child(2) {
   color: red;
+  cursor: pointer;
 }
 
 tr:hover td {

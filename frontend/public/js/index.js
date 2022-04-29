@@ -1,5 +1,6 @@
 //We wrap under ifs as we use same index.js in both pages
 const addForm = document.querySelector("#add-student");
+
 if (addForm) {
   addForm.addEventListener("submit", (e) => {
     console.log(addForm);
@@ -28,6 +29,38 @@ if (updateForm) {
 
     $.ajax(request).done((response) => {
       alert("Data updated succesfully");
+    });
+  });
+}
+
+// fetch("http://localhost:${data.port}/api/students/${data.id}", {
+//     method: "PUT",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(data),
+//   })
+//     .then((response) => {
+//       response.json();
+//     })
+//     .then((data) => {
+//       alert("Successfully updated data");
+//     });
+
+if (window.location.pathname == "/") {
+  const deleteBtn = document.querySelectorAll(".deleteBtn");
+  deleteBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-target");
+      const port = btn.getAttribute("data-port");
+      var request = {
+        url: `http://localhost:${port}/api/students/${id}`,
+        method: "DELETE",
+      };
+      if (window.confirm("Do you really want to delete the record?")) {
+        $.ajax(request).done((response) => {
+          alert("Data deleted successfully");
+          location.reload();
+        });
+      }
     });
   });
 }

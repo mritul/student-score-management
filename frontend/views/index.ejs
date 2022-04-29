@@ -34,7 +34,10 @@
                 <a href="/update-student?id=<%= students[i]._id %>"
                   ><i class="fa-solid fa-pen-to-square"></i
                 ></a>
-                <a href="/delete-student/<%= students[i]._id %> "
+                <a
+                  class="deleteBtn"
+                  data-target="<%= students[i]._id %>"
+                  data-port="<%= port %>"
                   ><i class="fa-solid fa-xmark"></i
                 ></a>
               </td>
@@ -46,5 +49,7 @@
         </table>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
